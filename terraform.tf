@@ -29,7 +29,7 @@ resource "aws_instance" "docker" {
       "sudo mkdir /var/lib/puppet-docker",
       "sudo git clone https://github.com/puppetlabs/puppet-in-docker-examples.git /var/lib/puppet-docker",
       "cd /var/lib/puppet-docker/compose",
-      "sudo docker-compose up",
+      "sudo docker-compose up -d",
       "echo 'PRINTING RUNNING INSTANCES AND ACCESS PORTS:'",
       "sudo docker ps -a",
     ]

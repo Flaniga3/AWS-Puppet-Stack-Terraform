@@ -42,7 +42,7 @@ pipeline {
           )
         }
 
-        sh "sudo /usr/bin/terraform apply -var 'jenkins_ami=${AMI_ID_REAL}' -var 'key_name=${KEY_NAME}' --auto-approve"
+        sh "sudo /usr/bin/terraform apply -var 'docker_ubuntu_ami=${AMI_ID_REAL}' -var 'key_name=${KEY_NAME}' --auto-approve"
       }
     }
 

@@ -13,9 +13,9 @@ pipeline {
     stage ("Create Login Key") {
       steps {
         script {
-          KEY_NAME = "jenkins_ssh_key_${(new Date()).getTime()}"
+          KEY_NAME = "ubuntu_docker_ssh_key_${(new Date()).getTime()}"
         }
-        sh "/usr/bin/ssh-keygen -t rsa -b 4096 -f /tmp/${KEY_NAME} -N '' -C 'Jenkins SSH Login'"
+        sh "/usr/bin/ssh-keygen -t rsa -b 4096 -f /tmp/${KEY_NAME} -N '' -C 'Ubuntu SSH Login'"
       }
     }
 
